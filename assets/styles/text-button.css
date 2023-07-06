@@ -1,0 +1,19 @@
+/* button used in page */
+
+a.text-button,
+button.text-button {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: 'Roboto Serif', serif;
+  border: var(--primary) solid 4px;
+  padding: 4px 8px;
+  height: 40px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+a.text-button:hover,
+button.a.text-button:hover {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}

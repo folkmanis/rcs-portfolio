@@ -1,0 +1,23 @@
+/* Stripping browser-agent stylesheet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+p,
+ul {
+  margin: 8px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  padding-left: 16px;
+}
