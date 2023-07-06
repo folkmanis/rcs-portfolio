@@ -1,6 +1,8 @@
 @import url('./color-pallete-v2.css');
 @import url('./normalise.css');
 @import url('./text-button.css');
+@import url('./row-container.css');
+@import url('./headlines.css');
 
 /* Global styles */
 
@@ -14,36 +16,6 @@ body {
   scroll-behavior: smooth;
 }
 
-h1,
-h2 {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 900;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  color: var(--primary);
-}
-
-h1 {
-  font-size: 32px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
-}
-
 section > *,
 footer > * {
   margin-left: auto;
@@ -52,52 +24,6 @@ footer > * {
 
 section {
   padding: 32px 5%;
-}
-
-/* Row container */
-
-.row-container {
-  display: flex;
-}
-
-@media (max-width: 800px) {
-  .row-container {
-    flex-direction: column;
-  }
-}
-
-.row-container:not(:first-child) {
-  margin-top: 48px;
-}
-
-.row-container > * {
-  margin: 0 8px;
-  flex: 1;
-}
-
-.row-container .text {
-  margin: 0 8px;
-}
-
-.row-container div.image-placeholder {
-  background-color: #999;
-  transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12),
-    box-shadow 0.5s,
-    -webkit-transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12);
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-}
-
-.row-container div.image-placeholder:hover {
-  transform: perspective(1000px) rotateX(0.6deg) rotateY(-1.6deg)
-    scale3d(1, 1, 1);
-}
-
-.row-container img {
-  max-width: 100%;
-}
-
-.row-container h3 {
-  margin-top: 0;
 }
 
 .image-shadow {
@@ -116,17 +42,23 @@ header {
   align-items: center;
 }
 
-header nav {
+[id] {
+  padding-top: 48px;
+}
+
+nav {
   width: 100%;
+  position: fixed;
+  z-index: 2;
 }
 
 @media (max-width: 800px) {
-  header nav {
+  nav {
     display: none;
   }
 }
 
-header nav ul {
+nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,11 +67,11 @@ header nav ul {
   margin: 0;
 }
 
-header nav ul li {
+nav ul li {
   margin: 0 16px;
 }
 
-header nav a {
+nav a {
   color: var(--on-primary);
 }
 
@@ -166,7 +98,6 @@ header h1 span:last-of-type {
 /* Hero section */
 
 #hero {
-  background-color: var(--primary);
   display: flex;
 }
 
@@ -199,11 +130,12 @@ header h1 span:last-of-type {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 3s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-#hero .avatar:hover {
+#hero:hover .avatar {
   transform: rotate(180deg);
+  transition: transform 3s ease-in-out;
 }
 
 #hero .avatar span {

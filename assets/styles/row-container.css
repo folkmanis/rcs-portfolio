@@ -1,0 +1,45 @@
+/* Row container */
+
+.row-container {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .row-container {
+    flex-direction: column;
+  }
+}
+
+.row-container {
+  margin-top: 48px;
+}
+
+.section-title + .row-container {
+  margin-top: 0;
+}
+
+.row-container > * {
+  flex: 1;
+}
+
+.row-container div.image-placeholder {
+  background-color: #999;
+  transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    box-shadow 0.5s,
+    -webkit-transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+}
+
+.row-container div.image-placeholder:hover {
+  transform: perspective(1000px) rotateX(0.6deg) rotateY(-1.6deg)
+    scale3d(1, 1, 1);
+}
+
+.row-container img {
+  max-width: 100%;
+}
+
+.row-container h3 {
+  margin-top: 0;
+}

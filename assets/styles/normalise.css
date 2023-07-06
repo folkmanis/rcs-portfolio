@@ -18,6 +18,7 @@ ul {
 ul {
   list-style-type: none;
 }
-li {
-  padding-left: 16px;
+
+html {
+  font-size: 14px;
 }
