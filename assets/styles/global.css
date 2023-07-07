@@ -1,0 +1,56 @@
+/* Global styles */
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+.image-shadow {
+  box-shadow: 0px 6px 10px #0002, 0 0 6px #0002;
+}
+
+.background-fill {
+  background: rgb(0, 107, 84);
+  background: linear-gradient(
+    48deg,
+    rgba(0, 107, 84, 1) 0%,
+    rgba(0, 121, 101, 1) 25%,
+    rgba(100, 203, 171, 1) 100%
+  );
+}
+
+h1,
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  margin-top: 32px;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}

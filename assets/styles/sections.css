@@ -1,0 +1,176 @@
+section > *,
+footer > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  padding: 32px 5%;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+/* Navigation bar */
+
+[id] {
+  padding-top: 48px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  [id] {
+    padding-top: inherit;
+  }
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  background-color: var(--primary);
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 16px;
+}
+
+nav a {
+  color: var(--on-primary);
+}
+
+/* Header styles */
+
+header div.header-container {
+  margin: auto 24px;
+}
+
+header div.header-container > span {
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+}
+header div.header-container h1 {
+  margin-top: 8px;
+}
+
+header h1 span:last-of-type {
+  font-style: italic;
+  color: var(--primary);
+}
+
+/* Header ends */
+
+/* Hero section */
+
+#hero {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  #hero {
+    flex-direction: column;
+  }
+}
+
+#hero * {
+  color: var(--on-primary);
+}
+
+#hero > * {
+  flex: 1;
+  margin: 32px 16px;
+}
+
+#hero > *:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#hero:hover .avatar {
+  transform: rotate(180deg);
+  transition: transform 3s ease-in-out;
+}
+
+#hero .avatar span {
+  color: var(--on-primary-container);
+  font-weight: 900;
+  font-size: 150px;
+  cursor: default;
+}
+/* Hero section ends */
+
+/* Certificates section */
+
+#certificates a img {
+  width: 100px;
+}
+
+/* Footer section */
+
+footer#contact {
+  background-color: var(--primary);
+  padding: 24px 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer#contact * {
+  color: var(--on-primary);
+}
+
+footer#contact .container {
+  display: flex;
+  align-items: center;
+}
+
+.back-to-top {
+  margin: 1em 0;
+  transition: all 0.6s;
+}
+.back-to-top i:hover {
+  transform: translateY(-2px);
+}
+
+footer#contact .container a {
+  height: 2em;
+  width: 2em;
+  font-size: 1.5em;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer#contact hr {
+  width: 100%;
+}
