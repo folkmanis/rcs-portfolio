@@ -8,14 +8,6 @@ section {
   padding: 32px 5%;
 }
 
-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-
 /* Navigation bar */
 
 [id] {
@@ -28,13 +20,13 @@ nav {
   z-index: 2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
   nav {
     display: none;
   }
 
   [id] {
-    padding-top: inherit;
+    padding-top: initial;
   }
 }
 
@@ -57,8 +49,22 @@ nav a {
 
 /* Header styles */
 
-header div.header-container {
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+header .header-container {
   margin: auto 24px;
+}
+
+@media (max-width: 560px) {
+  header .header-container {
+    text-align: center;
+  }
 }
 
 header div.header-container > span {
@@ -66,6 +72,7 @@ header div.header-container > span {
   font-weight: 900;
   font-style: italic;
 }
+
 header div.header-container h1 {
   margin-top: 8px;
 }
@@ -83,7 +90,7 @@ header h1 span:last-of-type {
   display: flex;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
   #hero {
     flex-direction: column;
   }
@@ -153,6 +160,12 @@ footer#contact .container {
   align-items: center;
 }
 
+@media (max-width: 560px) {
+  footer#contact .container {
+    flex-direction: column;
+  }
+}
+
 .back-to-top {
   margin: 1em 0;
   transition: all 0.6s;
@@ -164,7 +177,7 @@ footer#contact .container {
 footer#contact .container a {
   height: 2em;
   width: 2em;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 1em;
   display: flex;
   align-items: center;

@@ -5,7 +5,7 @@
   gap: 2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
   .row-container {
     flex-direction: column-reverse;
   }
@@ -29,6 +29,16 @@
 
 .row-container > div.image {
   flex-basis: 40%;
+}
+
+@media (max-width: 720px) {
+  .row-container > div.text {
+    flex-basis: 50%;
+  }
+
+  .row-container > div.image {
+    flex-basis: 50%;
+  }
 }
 
 .row-container div.image-placeholder {

@@ -6,10 +6,15 @@ button.text-button {
   font-weight: 900;
   font-family: 'Roboto Serif', serif;
   border: var(--primary) solid 4px;
-  padding: 4px 8px;
+  padding: 5px 8px;
   height: 40px;
   display: inline-block;
   transition: background-color 0.3s ease-in-out;
+}
+
+a.text-button > .fa,
+button.text-button > .fa {
+  vertical-align: -11.5%;
 }
 
 a.text-button:hover,
