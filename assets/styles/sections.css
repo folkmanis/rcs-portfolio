@@ -10,7 +10,8 @@ section {
 
 /* Navigation bar */
 
-[id] {
+section[id],
+footer[id] {
   padding-top: 48px;
 }
 
@@ -25,7 +26,8 @@ nav {
     display: none;
   }
 
-  [id] {
+  section[id],
+  footer[id] {
     padding-top: initial;
   }
 }
