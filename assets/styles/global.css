@@ -13,20 +13,6 @@ body {
   font-weight: 400;
 }
 
-.image-shadow {
-  box-shadow: 0px 6px 10px #0002, 0 0 6px #0002;
-}
-
-.background-fill {
-  background: rgb(0, 107, 84);
-  background: linear-gradient(
-    48deg,
-    rgba(0, 107, 84, 1) 0%,
-    rgba(0, 121, 101, 1) 25%,
-    rgba(100, 203, 171, 1) 100%
-  );
-}
-
 h1,
 h2 {
   font-family: 'Roboto', sans-serif;
