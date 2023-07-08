@@ -29,6 +29,7 @@
 
 .row-container > div.image {
   flex-basis: 40%;
+  height: 100%;
 }
 
 @media (max-width: 720px) {
@@ -41,21 +42,15 @@
   }
 }
 
-.row-container div.image-placeholder {
-  overflow: hidden;
-  max-height: 98%;
+.row-container > div.image img {
+  max-width: 100%;
+  height: 100%;
   transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12);
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
 }
-
-.row-container div.image-placeholder:hover {
+.row-container > div.image img:hover {
   transform: perspective(1000px) rotateX(1.6deg) rotateY(-2.6deg)
     scale3d(1, 1, 1);
-}
-
-.row-container img {
-  max-width: 100%;
-  height: 100%;
 }
 
 .row-container h3 {
