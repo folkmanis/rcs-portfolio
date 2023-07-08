@@ -113,6 +113,15 @@ header h1 span:last-of-type {
   align-items: center;
 }
 
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #hero .avatar {
   width: 180px;
   height: 180px;
@@ -121,12 +130,11 @@ header h1 span:last-of-type {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation: rotating 15s infinite linear;
 }
 
-#hero:hover .avatar {
-  transform: rotate(180deg);
-  transition: transform 3s ease-in-out;
+#hero .avatar:hover {
+  animation-play-state: paused;
 }
 
 #hero .avatar span {
