@@ -170,12 +170,6 @@ footer#contact .container {
   align-items: center;
 }
 
-@media (max-width: 560px) {
-  footer#contact .container {
-    flex-direction: column;
-  }
-}
-
 .back-to-top {
   margin: 1em 0;
 }
@@ -200,4 +194,16 @@ footer#contact .container a {
 
 footer#contact hr {
   width: 100%;
+}
+
+@media (max-width: 560px) {
+  footer#contact hr {
+    display: none;
+  }
+  footer#contact .container {
+    flex-direction: column;
+  }
+  footer#contact .container a {
+    margin: 0;
+  }
 }
