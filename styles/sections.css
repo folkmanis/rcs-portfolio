@@ -88,12 +88,12 @@ header h1 span:last-of-type {
 
 /* about section */
 
-#about {
+#about .container {
   display: flex;
 }
 
 @media (max-width: 560px) {
-  #about {
+  #about .container {
     flex-direction: column;
   }
 }
@@ -102,12 +102,12 @@ header h1 span:last-of-type {
   color: var(--on-primary);
 }
 
-#about > * {
+#about .container > * {
   flex: 1;
   margin: 32px 16px;
 }
 
-#about > *:first-child {
+#about .container > div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +122,7 @@ header h1 span:last-of-type {
   }
 }
 
-#about .avatar {
+#about .container .avatar {
   width: 180px;
   height: 180px;
   border-radius: 50%;
