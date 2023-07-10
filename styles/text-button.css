@@ -1,11 +1,11 @@
-/* button used in page */
+/* button */
 
 a.text-button,
 button.text-button {
   font-size: 24px;
   font-weight: 900;
   font-family: 'Roboto Serif', serif;
-  border: var(--primary) solid 4px;
+  border: var(--primary) solid 3px;
   padding: 5px 8px;
   height: 40px;
   display: inline-block;
@@ -18,7 +18,7 @@ button.text-button > .fa {
 }
 
 a.text-button:hover,
-button.a.text-button:hover {
+button.text-button:hover {
   background-color: var(--primary);
   color: var(--on-primary);
 }
