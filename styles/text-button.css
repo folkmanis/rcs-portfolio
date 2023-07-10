@@ -1,24 +1,36 @@
 /* button */
 
-a.text-button,
-button.text-button {
-  font-size: 24px;
+a.framed-button,
+button.framed-button {
+  font-size: 1.3rem;
   font-weight: 900;
   font-family: 'Roboto Serif', serif;
   border: var(--primary) solid 3px;
-  padding: 5px 8px;
-  height: 40px;
+  padding: 0.4rem 1rem;
   display: inline-block;
   transition: background-color 0.3s ease-in-out;
+  line-height: 1.2;
 }
 
-a.text-button > .fa,
-button.text-button > .fa {
-  vertical-align: -11.5%;
-}
-
-a.text-button:hover,
-button.text-button:hover {
+a.framed-button:hover,
+button.framed-button:hover {
   background-color: var(--primary);
   color: var(--on-primary);
+}
+
+a.plain-button,
+button.plain-button {
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: 'Roboto Serif', serif;
+  border: none;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+  line-height: 1.2;
+}
+
+a.plain-button:hover,
+button.plain-button:hover {
+  transform: translate(2px);
 }
