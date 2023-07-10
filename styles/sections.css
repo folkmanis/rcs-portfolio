@@ -25,11 +25,6 @@ nav {
   nav {
     display: none;
   }
-
-  section[id],
-  footer[id] {
-    padding-top: initial;
-  }
 }
 
 nav ul {
