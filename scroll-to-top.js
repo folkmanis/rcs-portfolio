@@ -1,40 +1,43 @@
 
-const visibilityStartPos = 200;
-const hidePos = 150;
+const VISIBILITY_START_POS = 300;
+const HIDE_POS = 150;
+
+let ticking = false;
+let buttonVisible = false;
+let button = null;
 
 function scrollToTopClick() {
-    console.log('To top');
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
     });
 }
 
-let lastScrollPos = 0;
-let ticking = false;
-let buttonVisible = false;
-const button = document.getElementById('scroll-to-top');
-
-function checkButtonVisibility() {
-    if (buttonVisible === false && lastScrollPos > visibilityStartPos) {
-        console.log(lastScrollPos);
+function updateButtonVisibility(pos) {
+    if (buttonVisible === false && pos > VISIBILITY_START_POS) {
         buttonVisible = true;
-        button.style.visibility = 'visible';
-        // TODO show button
-    } else if (buttonVisible === true && lastScrollPos < hidePos) {
-        console.log(lastScrollPos);
+        button.classList.add('visible');
+    } else if (buttonVisible === true && pos < HIDE_POS) {
         buttonVisible = false;
-        button.style.visibility = 'hidden';
-        // TODO hide button
+        button.classList.remove('visible');
     }
     ticking = false;
 }
 
 
-document.addEventListener('scroll', (event) => {
-    lastScrollPos = window.scrollY;
-    if (!ticking) {
-        ticking = true;
-        checkButtonVisibility();
+function registerScrollListener() {
+
+    button = document.getElementById('scroll-to-top');
+
+    if (!button) {
+        return;
     }
-});
+    document.addEventListener('scroll', () => {
+        if (!ticking) {
+            ticking = true;
+            updateButtonVisibility(window.scrollY);
+        }
+    });
+}
+
+registerScrollListener();
