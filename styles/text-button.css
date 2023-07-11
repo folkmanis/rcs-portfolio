@@ -3,7 +3,7 @@
 a.framed-button,
 button.framed-button {
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 700;
   font-family: 'Roboto Serif', serif;
   border: var(--primary) solid 3px;
   padding: 0.4rem 1rem;
@@ -21,7 +21,7 @@ button.framed-button:hover {
 a.plain-button,
 button.plain-button {
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 700;
   font-family: 'Roboto Serif', serif;
   border: none;
   padding: 0.4rem 1rem;
