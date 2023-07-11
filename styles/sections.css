@@ -195,6 +195,12 @@ footer#contact a:hover i.scalable {
   transform: scale(2);
 }
 
+@media (hover: none) and (max-width: 560px) {
+  footer#contact i.scalable {
+    transform: scale(2);
+  }
+}
+
 footer#contact a {
   height: 6rem;
   width: 6rem;
