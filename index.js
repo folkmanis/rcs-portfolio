@@ -25,7 +25,7 @@ const targetElements = [
     {
         element: '.row-container .image',
         animation: {
-            delay: 1000,
+            delay: 700,
             origin: window.innerWidth > 560 ? "right" : "bottom",
         }
     },
