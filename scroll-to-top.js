@@ -1,4 +1,3 @@
-
 const VISIBILITY_START_POS = 300;
 const HIDE_POS = 150;
 
@@ -32,6 +31,7 @@ function registerScrollListener() {
     if (!button) {
         return;
     }
+
     document.addEventListener('scroll', () => {
         if (!ticking) {
             ticking = true;
