@@ -28,15 +28,26 @@ const targetElements = [
             delay: 1000,
             origin: window.innerWidth > 560 ? "right" : "bottom",
         }
+    },
+    {
+        element: 'nav',
+        animation: {
+            delay: 1000,
+            origin: 'top',
+        }
+    },
+    {
+        element: 'section#education li',
+        animation: {
+            delay: 500,
+            origin: window.innerWidth > 560 ? "left" : "bottom",
+        }
     }
 ];
 
-ScrollReveal({ reset: false });
+ScrollReveal();
 
-if (targetElements.length > 0) {
-    targetElements.forEach(({ element, animation }) => {
-        const options = Object.assign({}, defaultProps, animation);
-        console.log(element, options);
-        ScrollReveal().reveal(element, options);
-    });
-}
+targetElements.forEach(({ element, animation }) =>
+    ScrollReveal().reveal(element, Object.assign({}, defaultProps, animation))
+)
+
