@@ -206,7 +206,7 @@ footer#contact a {
 }
 
 footer#contact hr {
-  width: 100%;
+  width: 90%;
 }
 
 @media (max-width: 560px) {
