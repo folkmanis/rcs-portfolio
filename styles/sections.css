@@ -8,6 +8,20 @@ section {
   padding: 32px 5%;
 }
 
+@media (min-width: 900px) {
+  section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 560px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* Navigation bar */
 
 section[id],
