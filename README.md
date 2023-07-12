@@ -1,19 +1,26 @@
 # rcs-portfolio
-Portfolio project for Riga Coding School
 
-HTML, CSS, JS
+## Portfolio project for [Riga Coding School](https://rigacoding.lv/)
 
-## Inspired by
+![Preview](assets/readme/portfolio-demo.gif)
 
-https://github.com/cobiwave/simplefolio/tree/master
+## Learning path
 
-## External libraries
+- HTML
+- CSS
+- JS
 
-ScrollReveal
+## Design inspired by
 
-Google Fonts
+- [Simplefolio](https://github.com/cobiwave/simplefolio/tree/master)
 
-FontAwesome Icons
+## External resources
+
+- Roboto by [Google Fonts](https://fonts.google.com/)
+
+- Icons by [FontAwesome](https://fontawesome.com/)
+
+- [ScrollReveal](https://scrollrevealjs.org/)
 
 ## Live demo
 
