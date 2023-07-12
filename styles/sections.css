@@ -110,6 +110,13 @@ header h1 span:last-of-type {
   color: var(--on-primary);
 }
 
+@media (min-width: 720px) {
+  section#about {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    padding-bottom: 10%;
+  }
+}
+
 #about .container > * {
   flex: 1;
   margin: 32px 16px;
@@ -119,6 +126,13 @@ header h1 span:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#about .container li {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-left: 2rem;
+  text-indent: -1rem;
 }
 
 @keyframes rotating {
