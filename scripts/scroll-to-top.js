@@ -1,7 +1,6 @@
 const VISIBILITY_START_POS = 300;
 const HIDE_POS = 150;
 
-let ticking = false;
 let buttonVisible = false;
 let button = null;
 
@@ -20,7 +19,6 @@ function updateButtonVisibility(pos) {
         buttonVisible = false;
         button.classList.remove('visible');
     }
-    ticking = false;
 }
 
 
@@ -28,16 +26,12 @@ function registerScrollListener() {
 
     button = document.getElementById('scroll-to-top');
 
-    if (!button) {
-        return;
+    if (button) {
+        document.addEventListener('scroll', () => {
+            updateButtonVisibility(window.scrollY);
+        });
     }
 
-    document.addEventListener('scroll', () => {
-        if (!ticking) {
-            ticking = true;
-            updateButtonVisibility(window.scrollY);
-        }
-    });
 }
 
 registerScrollListener();
