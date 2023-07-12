@@ -2,8 +2,6 @@
 
 ## Portfolio project for [Riga Coding School](https://rigacoding.lv/)
 
-![Preview](assets/readme/portfolio-demo.gif)
-
 ## Learning path
 
 - HTML
