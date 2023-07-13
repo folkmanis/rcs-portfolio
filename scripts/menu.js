@@ -1,11 +1,13 @@
 const BACKDROP_CLASS = 'backdrop';
 const BACKDROP_HIDDEN_CLASS = 'backdrop-hidden';
+const MENU_VISIBLE_CLASS = 'visible';
+
 
 function onMenuToggle() {
 
     const menu = document.querySelector('nav');
 
-    if (menu && menu.classList.contains('visible')) {
+    if (menu && menu.classList.contains(MENU_VISIBLE_CLASS)) {
         closeMenu();
     } else {
         openMenu();
@@ -20,7 +22,7 @@ function openMenu() {
     if (menu) {
 
         createBackdrop();
-        menu.classList.add('visible');
+        menu.classList.add(MENU_VISIBLE_CLASS);
 
         const links = menu.getElementsByTagName('a');
         for (let i = 0; i < links.length; i++) {
