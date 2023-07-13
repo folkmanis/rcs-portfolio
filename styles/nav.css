@@ -8,15 +8,19 @@ nav {
 }
 
 nav ul {
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2rem;
   margin: 0;
 }
 
 nav ul li {
   margin: 0 1rem;
+}
+
+nav ul li .side-menu-only {
+  display: none;
 }
 
 nav a {
@@ -38,31 +42,56 @@ nav a {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  opacity: 0;
+  opacity: 0.7;
   z-index: 8;
   animation: backdrop-inject 0.3s ease-in-out;
 }
-.backdrop-visible {
+
+.backdrop-hidden {
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  opacity: 0.7;
+}
+
+/* hamburger menu */
+
+#menu-trigger .hamburger {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menu-trigger .hamburger span {
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary);
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.visible #menu-trigger .hamburger span:first-child {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.visible #menu-trigger .hamburger span:last-child {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.visible #menu-trigger .hamburger span:nth-child(2) {
+  opacity: 0;
 }
 
 #menu-trigger {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 11;
+  position: absolute;
+  top: 10px;
+  left: -70px;
+  z-index: 10;
   display: none;
   opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
 }
 
-@keyframes menu-side-inject {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+.visible #menu-trigger {
+  opacity: 1;
 }
 
 @media (max-width: 560px) {
@@ -71,16 +100,21 @@ nav a {
   }
 
   nav {
-    display: none;
-    right: 0;
-    width: auto;
+    top: 0;
+    right: -200px;
+    width: 200px;
     height: 100vh;
-    padding: 100px 1rem 0;
+    padding: 2rem 1rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav.visible {
+    right: 0;
     box-shadow: -3px 0 10px var(--on-background);
-    animation: menu-side-inject 0.3s ease-in-out;
   }
 
   nav ul {
+    height: autopx;
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -88,5 +122,9 @@ nav a {
 
   nav ul li {
     margin: 1rem 0;
+  }
+
+  nav ul li .side-menu-only {
+    display: initial;
   }
 }
