@@ -25,14 +25,21 @@
         </button>
     </div>
 
-    <div id="menu-trigger">
-        <button class="square-button" aria-label="Atvērt izvēlni" onclick="onMenuToggle()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
 
     <nav>
+        <div id="menu-trigger">
+            <button class="square-button" aria-label="Atvērt izvēlni" onclick="onMenuToggle()">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
         <ul>
+            <li>
+                <a href="#top" class="side-menu-only" role="button"> Uz sākumu </a>
+            </li>
             <li>
                 <a href="#about" role="button"> Nedaudz par sevi </a>
             </li>
