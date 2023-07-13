@@ -1,4 +1,4 @@
-/* button */
+/* text button */
 
 a.framed-button,
 button.framed-button {
@@ -33,4 +33,19 @@ button.plain-button {
 a.plain-button:hover,
 button.plain-button:hover {
   transform: translate(2px);
+}
+
+/* square button */
+
+button.square-button {
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+  background-color: var(--background);
+}
+
+button.square-button i {
+  font-size: 24px;
 }

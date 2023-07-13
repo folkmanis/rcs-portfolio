@@ -20,12 +20,18 @@
 <body>
 
     <div id="scroll-to-top">
-        <button onclick="scrollToTopClick();" aria-label="Uz sākumu!">
+        <button class="square-button" onclick="scrollToTopClick();" aria-label="Uz sākumu!">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
     </div>
 
-    <nav class="load-hidden">
+    <div id="menu-trigger">
+        <button class="square-button" aria-label="Atvērt izvēlni" onclick="onMenuToggle()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <nav>
         <ul>
             <li>
                 <a href="#about" role="button"> Nedaudz par sevi </a>
@@ -279,6 +285,7 @@
 
     <script src="scripts/scroll-reveal.js"></script>
     <script src="scripts/scroll-to-top.js"></script>
+    <script src="scripts/menu.js"></script>
 
 </body>
 

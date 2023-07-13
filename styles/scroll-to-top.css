@@ -8,18 +8,16 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 560px) {
+  #scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 #scroll-to-top.visible {
   visibility: visible;
   opacity: 0.5;
-}
-
-#scroll-to-top button {
-  width: 60px;
-  height: 60px;
-  border: 3px solid var(--primary);
-  color: var(--primary);
-  cursor: pointer;
-  background-color: var(--background);
 }
 
 #scroll-to-top.visible:hover {

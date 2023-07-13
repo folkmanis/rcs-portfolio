@@ -1,7 +1,8 @@
 @import url('./styles/color-pallete-v2.css');
 @import url('./styles/normalize.css');
 @import url('./styles/global.css');
-@import url('./styles/text-button.css');
+@import url('./styles/buttons.css');
 @import url('./styles/row-container.css');
 @import url('./styles/sections.css');
 @import url('./styles/scroll-to-top.css');
+@import url('./styles/nav.css');
