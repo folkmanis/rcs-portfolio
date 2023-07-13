@@ -29,13 +29,14 @@ const targetElements = [
             origin: window.innerWidth > 560 ? "right" : "bottom",
         }
     },
-    {
-        element: 'nav',
-        animation: {
-            delay: 1000,
-            origin: 'top',
-        }
-    },
+    /*     {
+            element: 'nav',
+            animation: {
+                delay: 1000,
+                origin: 'top',
+                mobile: false,
+            }
+        }, */
     {
         element: 'section#education li',
         animation: {
