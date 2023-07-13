@@ -44,6 +44,10 @@ button.square-button {
   color: var(--primary);
   cursor: pointer;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 button.square-button i {
